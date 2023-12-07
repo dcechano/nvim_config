@@ -53,7 +53,7 @@ return require('packer').startup(function(use)
 		"folke/trouble.nvim",
 		config = function()
 			require("trouble").setup {
-				icons = false,
+				icons = true,
 				-- your configuration comes here
 				-- or leave it empty to use the default settings
 				-- refer to the configuration section below
@@ -65,8 +65,28 @@ return require('packer').startup(function(use)
 	
 	--Pull terminal up
 	use 'voldikss/vim-floaterm'
+    
+    --tab bar 
+    use 'romgrk/barbar.nvim'
 
-	-- Theme
+    -- rooter
+    use 'airblade/vim-rooter'
+
+    --goto-preview
+    use {
+    'rmagatti/goto-preview',
+     config = function()
+             require('goto-preview').setup {}
+         end
+    }
+    
+    -- status bar
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+
+    -- Theme
 	use({
 		'AlexvZyl/nordic.nvim',
 		as = 'nordic',

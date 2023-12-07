@@ -20,7 +20,7 @@ cmp.setup({
   -- Enable LSP snippets
   snippet = {
     expand = function(args)
-        vim.fn["vsnip#anonymous"](args.body)
+  --      vim.fn["vsnip#anonymous"](args.body)
     end,
   },
   mapping = {

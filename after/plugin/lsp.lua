@@ -31,6 +31,7 @@ end)
 --})
 
 --============================
+vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
 
 local handlers = {
     function(server_name)
@@ -50,6 +51,10 @@ local handlers = {
     ["clangd"] = function()
         local lspconfig = require("lspconfig")
         lspconfig.clangd.setup{}
+    end,
+    ["lua_ls"] = function()
+        local lspconfig = require("lspconfig")
+        lspconfig.lua_ls.setup{}
     end
 }
     require('mason-lspconfig').setup({ handlers = handlers })
