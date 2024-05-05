@@ -41,9 +41,9 @@ return require('packer').startup(function(use)
 			{'L3MON4D3/LuaSnip'},
 			{'rafamadriz/friendly-snippets'},
 		}
-	}
+}
 
-	use("theprimeagen/harpoon")
+	--use("theprimeagen/harpoon")
 	use("theprimeagen/refactoring.nvim")
 	use("mbbill/undotree")
 	use("tpope/vim-fugitive")
@@ -67,7 +67,7 @@ return require('packer').startup(function(use)
 	use 'voldikss/vim-floaterm'
     
     --tab bar 
-    use 'romgrk/barbar.nvim'
+   -- use 'romgrk/barbar.nvim'
 
     -- rooter
     use 'airblade/vim-rooter'
@@ -87,12 +87,15 @@ return require('packer').startup(function(use)
     }
 
     -- Theme
-	use({
-		'AlexvZyl/nordic.nvim',
-		as = 'nordic',
-		config = function()
-            vim.cmd('colorscheme nordic')
-		end
-	})
+    use { "ellisonleao/gruvbox.nvim" } 
+    use { "xiyaowong/transparent.nvim" }
+    -- use({
+	-- 	'AlexvZyl/nordic.nvim',
+	-- 	as = 'nordic',
+	-- 	config = function()
+    --         vim.cmd('colorscheme nordic')
+	-- 	end
+	-- })
+    -- use "EdenEast/nightfox.nvim"
 
 end)
